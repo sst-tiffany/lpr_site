@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'info.apps.InfoConfig',
     'persons_and_courses.apps.PersonsAndCoursesConfig'
 ]
 
