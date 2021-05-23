@@ -21,7 +21,7 @@
 > cd LOCAL_PATH
 
 - предлагаю сразу уйти в свою ветку (я свою назвала tanya)
-> git checkout your-branch-name
+> git checkout -b your-branch-name
 
 <br>
 
