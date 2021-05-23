@@ -5,7 +5,7 @@ from .models import News
 
 
 def index(request):
-    news = News.objects.all()
+    news = News.objects.order_by('-date').all()
     template = loader.get_template('news/index.html')
     context = {
         'news': news,
