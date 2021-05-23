@@ -30,42 +30,21 @@ td {
 </head>
 <body>
 
-<h2>Сотрудники и студенты</h2>
-
-<table style="width:100%">
-  <tr>
-    <th>Имя</th>
-    <th>Роль</th>
-    <th>Научные интересы</th>
-    <th>Предметы</th>
-  </tr>
-  {% for p in persons %}
-    <tr>
-      <td>{{p.full_name}}</td>
-      <td>{{p.category}}</td>
-      <td>{{p.research_field}}</td>
-      <td>{{p.course}}</td>
-    </tr>
-  {% endfor %}
-</table>
-
-<br><br><br>
-
-<h2>Курсы</h2>
+<h2>Лаборатории</h2>
 
 <table style="width:100%">
   <tr>
     <th>Название</th>
-    <th>Семестр</th>
-    <th>Нагрузка</th>
-    <th>Литература</th>
+    <th>Заведующий лабораторией</th>
+    <th>Контакты</th>
+    <th>Ссылка</th>
   </tr>
-  {% for c in courses %}
+  {% for l in laboratories %}
     <tr>
-      <td>{{c.name}}</td>
-      <td>{{c.semester}}</td>
-      <td>{{c.hours}}</td>
-      <td>{{c.books}}</td>
+      <td>{{l.category}}</td>
+      <td>{{l.head}}</td>
+      <td>{{l.contacts}}</td>
+      <td>{{l.link}}</td>
     </tr>
   {% endfor %}
 </table>

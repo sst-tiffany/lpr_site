@@ -6,7 +6,7 @@ from .models import *
 
 def index(request):
     information = Information.objects.all()[0]
-    template = loader.get_template('index.html')
+    template = loader.get_template('info/index.html')
     context = {
         'title': information.title,
         'info': information.info
