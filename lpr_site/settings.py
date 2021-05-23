@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'info.apps.InfoConfig',
     'fields.apps.FieldsConfig',
+    'news.apps.NewsConfig',
     'persons_and_courses.apps.PersonsAndCoursesConfig'
 ]
 
