@@ -37,14 +37,14 @@ td {
     <th>Название</th>
     <th>Заведующий лабораторией</th>
     <th>Контакты</th>
-    <th>Ссылка</th>
+    <th> Ссылка</th>
   </tr>
   {% for l in laboratories %}
     <tr>
       <td>{{l.category}}</td>
       <td>{{l.head}}</td>
       <td>{{l.contacts}}</td>
-      <td>{{l.link}}</td>
+      <td><a href="{{l.link}}">Ссылка</a></td>
     </tr>
   {% endfor %}
 </table>
