@@ -30,27 +30,6 @@ td {
 </head>
 <body>
 
-<h2>Преподаватели</h2>
-
-<table style="width:100%">
-  <tr>
-    <th>Имя</th>
-    <th>Роль</th>
-    <th>Научные интересы</th>
-    <th>Предметы</th>
-  </tr>
-  {% for p in persons %}
-    <tr>
-      <td>{{p.full_name}}</td>
-      <td>{{p.category}}</td>
-      <td>{{p.research_field}}</td>
-      <td>{{p.course}}</td>
-    </tr>
-  {% endfor %}
-</table>
-
-<br><br><br>
-
 <h2>Курсы</h2>
 
 <table style="width:100%">
