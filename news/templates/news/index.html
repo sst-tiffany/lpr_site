@@ -4,44 +4,68 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <style>
-table {
-  min-width: 1000px !important;
-  width: 100%;
-  background: #fff;
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
   font-family: 'Roboto';
 }
-th {
-    background: #1089ff;
-    border: none;
-    padding: 20px 30px;
-    font-size: 14px;
-    color: #fff;
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-tr {
-    margin-bottom: 10px;
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
 }
-td {
-    border: none;
-    padding: 20px 30px;
-    border-bottom: 3px solid #f8f9fd;
-    font-size: 14px;
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
 }
 </style>
 </head>
 <body>
-
-<h2>Новости</h2>
-
-<table style="width:100%">
-  <tr>
-    <th>Дата</th>
-    <th>Новость</th>
-  </tr>
-  {% for n in news %}
-    <tr>
-      <td>{{n.date}}</td>
-      <td>{{n.text}}</td>
-    </tr>
-  {% endfor %}
-</table>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h1 style="font-family: 'Roboto'">Новости</h1>
+    </div>
+    {% for n in news %}
+      <div class="card">
+        <h2>{{n.name}}...</h2>
+        <h5>{{n.date}}</h5>
+        <p>{{n.text}}</p>
+        <p><a href="{{n.link}}">Ссылка на источник</a><br></p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
 </body>
