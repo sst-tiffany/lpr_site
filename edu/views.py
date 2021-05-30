@@ -28,7 +28,7 @@ def professors(request):
 
 
 def students(request):
-    students = Student.objects.order_by('full_name').all()
+    students = Student.objects.order_by('year', 'full_name').all()
     template = loader.get_template('edu/students.html')
     context = {
         'students': students
