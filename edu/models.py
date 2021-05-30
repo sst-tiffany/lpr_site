@@ -11,8 +11,19 @@ class Course(models.Model):
         return self.name
 
 
-class Person(models.Model):
+class Professor(models.Model):
     full_name = models.CharField(max_length=200)
-    category = models.CharField(max_length=50)
     research_field = models.TextField(max_length=1000)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.full_name
+
+
+class Student(models.Model):
+    full_name = models.CharField(max_length=200)
+    year = models.IntegerField()
+    advisor = models.ForeignKey(Professor, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.full_name

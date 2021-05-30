@@ -30,42 +30,19 @@ td {
 </head>
 <body>
 
-<h2>Преподаватели</h2>
+<h2 style="font-family: 'Roboto'">Преподаватели</h2>
 
 <table style="width:100%">
   <tr>
     <th>Имя</th>
-    <th>Роль</th>
     <th>Научные интересы</th>
     <th>Предметы</th>
   </tr>
-  {% for p in persons %}
+  {% for p in professors %}
     <tr>
       <td>{{p.full_name}}</td>
-      <td>{{p.category}}</td>
       <td>{{p.research_field}}</td>
       <td>{{p.course}}</td>
-    </tr>
-  {% endfor %}
-</table>
-
-<br><br><br>
-
-<h2>Курсы</h2>
-
-<table style="width:100%">
-  <tr>
-    <th>Название</th>
-    <th>Семестр</th>
-    <th>Нагрузка</th>
-    <th>Литература</th>
-  </tr>
-  {% for c in courses %}
-    <tr>
-      <td>{{c.name}}</td>
-      <td>{{c.semester}}</td>
-      <td>{{c.hours}}</td>
-      <td>{{c.books}}</td>
     </tr>
   {% endfor %}
 </table>

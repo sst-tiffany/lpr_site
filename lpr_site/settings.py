@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'info.apps.InfoConfig',
     'fields.apps.FieldsConfig',
     'news.apps.NewsConfig',
-    'persons_and_courses.apps.PersonsAndCoursesConfig'
+    'edu.apps.EduConfig'
 ]
 
 MIDDLEWARE = [

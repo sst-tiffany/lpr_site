@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        font-family: 'Roboto';
+      }
+
+      li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      li a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+   </style>
+</head>
+<body>
+   <h2 style="font-family: 'Roboto'">Разделы</h2>
+   <ul>
+     <li><a class="active" href="/edu/courses">Учебные курсы</a></li>
+     <li><a href="/edu/professors">Преподаватели</a></li>
+     <li><a href="/edu/students">Студенты</a></li>
+   </ul>
+</body>
