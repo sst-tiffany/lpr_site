@@ -35,11 +35,10 @@ td {
 <table style="width:100%">
   <tr>
     <th>Имя</th>
-    <th>Роль</th>
     <th>Научные интересы</th>
     <th>Предметы</th>
   </tr>
-  {% for p in persons %}
+  {% for p in professors %}
     <tr>
       <td>{{p.full_name}}</td>
       <td>{{p.research_field}}</td>

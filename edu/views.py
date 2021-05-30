@@ -10,7 +10,7 @@ def index(request):
 
 
 def courses(request):
-    courses = Course.objects.all()
+    courses = Course.objects.order_by('semester', 'name').all()
     template = loader.get_template('edu/courses.html')
     context = {
         'courses': courses
@@ -19,7 +19,7 @@ def courses(request):
 
 
 def professors(request):
-    professors = Professor.objects.all()
+    professors = Professor.objects.order_by('full_name').all()
     template = loader.get_template('edu/professors.html')
     context = {
         'professors': professors
@@ -28,7 +28,7 @@ def professors(request):
 
 
 def students(request):
-    students = Student.objects.all()
+    students = Student.objects.order_by('full_name').all()
     template = loader.get_template('edu/students.html')
     context = {
         'students': students
