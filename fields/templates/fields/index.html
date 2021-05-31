@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+table {
+  min-width: 1000px !important;
+  width: 100%;
+  background: #fff;
+  font-family: 'Roboto';
+}
+th {
+    background: #1089ff;
+    border: none;
+    padding: 20px 30px;
+    font-size: 14px;
+    color: #fff;
+}
+tr {
+    margin-bottom: 10px;
+}
+td {
+    border: none;
+    padding: 20px 30px;
+    border-bottom: 3px solid #f8f9fd;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<h2>Лаборатории</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Название</th>
+    <th>Заведующий лабораторией</th>
+    <th>Контакты</th>
+    <th> Ссылка</th>
+  </tr>
+  {% for l in laboratories %}
+    <tr>
+      <td>{{l.category}}</td>
+      <td>{{l.head}}</td>
+      <td>{{l.contacts}}</td>
+      <td><a href="{{l.link}}">Ссылка</a></td>
+    </tr>
+  {% endfor %}
+</table>
+</body>

@@ -1,13 +1,13 @@
 from django.http import HttpResponse
 from django.template import loader
 
-from .models import News
+from .models import Laboratory
 
 
 def index(request):
-    news = News.objects.order_by('-date').all()
-    template = loader.get_template('news/index.html')
+    laboratories = Laboratory.objects.all()
+    template = loader.get_template('fields/index.html')
     context = {
-        'news': news,
+        'laboratories': laboratories
     }
     return HttpResponse(template.render(context, request))
